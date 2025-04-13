@@ -46,7 +46,7 @@ def main():
     if solution:
         try:
             response = jarvis.post_solution(1, solution)
-            print("\nServer response:", response)
+            print("Server response:", response)
         except Exception as e:
             print(f"Error posting solution: {e}")
     else:

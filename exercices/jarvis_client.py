@@ -45,6 +45,19 @@ class JarvisClient:# class to interact with the Jarvis API
         except Exception as err:
             print(f"Error posting solution: {err}")
             return None
+        
+    def get_ironman_location(self):
+        url = f"{self.base_url}/where_is_ironman"
+        try:
+            response = requests.get(url, headers=self.headers, timeout=self.timeout)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.HTTPError as err:
+            print(f"HTTP Error: {err}")
+            return None
+        except Exception as err:
+            print(f"Error fetching Ironman's location: {err}")
+            return None
 
 #jarvis = JarvisClient()
 # example_solution=["mente", "espacio"]
