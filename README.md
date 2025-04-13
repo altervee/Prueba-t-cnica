@@ -47,6 +47,45 @@ Copiar
 Editar
 
 Feel free to copy and paste this into your `README.md` file! Let me know if you need any more tweaks or additions.
+Exercise 3 – Fuel-Efficient Path to Ironman
+This exercise involves calculating the most fuel-efficient route for a satellite to reach Ironman, considering dynamic weather penalties on each path.
 
+### Goals
+Start from New York
 
+Find Ironman’s location (e.g. "Berlin")
 
+Traverse via satellite links
+
+Minimize fuel consumption
+
+Ensure remaining fuel ≥ 30 units
+
+### Fuel Rules
+Start Fuel: 100 units
+
+Base Consumption per Jump: 10 units
+
+Weather Penalties:
+
+"Viento en contra" → +1.5
+
+"Lluvia" → +0.2
+
+"Tormenta" → +2.0
+
+### Solution Summary
+Used Dijkstra’s algorithm to calculate the path with least fuel consumption, not just shortest hops.
+
+Evaluated weather impact per satellite connection.
+
+Ensured mission success based on final fuel.
+
+### Sample Output
+bash
+Copiar
+Editar
+Ironman is in: Berlin
+Calculated path: New York -> Washington -> Atlantic -> Madrid -> Barcelona -> Roma -> Paris -> Berlin
+Remaining fuel: 34.3
+Mission can succeed with enough fuel.
