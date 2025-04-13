@@ -1,5 +1,8 @@
 import requests
-
+"""
+Just the logic of the client to interact with the Jarvis API.
+This is a simple client to interact with the Jarvis API. It has two methods:
+"""
 class JarvisClient:# class to interact with the Jarvis API
     def __init__(self, candidate_key: str = "xVytsh2d0kRt"):
         self.base_url = "https://jarvis.visiotechsecurity.com"
@@ -43,7 +46,7 @@ class JarvisClient:# class to interact with the Jarvis API
             print(f"Error posting solution: {err}")
             return None
 
-jarvis = JarvisClient()
+#jarvis = JarvisClient()
 # example_solution=["mente", "espacio"]
 # solution = jarvis.post_solution(1, example_solution)
 # print(solution) # Print the solution response
